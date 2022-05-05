@@ -31,12 +31,14 @@ function App() {
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
+    if(loggedIn) {
     Promise.all([api.getProfile(), api.getInitialCards()])
       .then(([userData, cardData]) => {
         setCurrentUser(userData);
         setCards(cardData);
       })
       .catch((err) => console.log(err))
+    }
   }, [loggedIn])
 
   useEffect(() => {

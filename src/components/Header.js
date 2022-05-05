@@ -13,16 +13,16 @@ function Header({userEmail, handleSignOut}) {
     
       <Switch>
         <Route exact path="/">
-        <header className="header">
-          <div className="header__container">
-            <img src={logo} alt="Логотип Место" className="header__logo" />
-            <div className={!isMenuOpen ? 'header__open-button' : 'header__close-button'} onClick={toggleBurgerMenu} />
-          </div>  
-          <div className={`header__menu ${isMenuOpen ?'header__menu_opened' : ''}`}>
-            <h3 className="header__item">{userEmail}</h3>
-            <Link to="/sign-in" onClick={handleSignOut} className="header__item header__item_type_link">Выйти</Link>
-          </div>
-        </header>  
+          <header className="header">
+            <div className="header__container">
+              <img src={logo} alt="Логотип Место" className="header__logo" />
+              <div className={!isMenuOpen ? 'header__open-button' : 'header__close-button'} onClick={toggleBurgerMenu} />
+            </div>  
+            <div className={`header__menu ${isMenuOpen ?'header__menu_opened' : ''}`}>
+              <h3 className="header__item">{userEmail}</h3>
+              <Link to="/sign-in" onClick={handleSignOut} className="header__item header__item_type_link">Выйти</Link>
+            </div>
+          </header>  
         </Route>
       
         <Route path="/sign-up">
