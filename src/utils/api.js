@@ -1,15 +1,8 @@
 class Api {
-  constructor({baseUrl}) {
+  constructor({baseUrl, headers}) {
+    this._headers = headers;
     this._baseUrl = baseUrl;
   }
-
-  get _headers() {
-    return {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${localStorage.getItem("jwt")}`,
-    }
-  }
-
   _getResponseData(res) {
     if (!res.ok) {
       return Promise.reject(`Ошибка: ${res.status}`);
@@ -86,5 +79,9 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'https://api.study.hard.nomoreparties.sbs',
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-37',
+  headers: {
+    authorization: '82709d87-d574-4316-adf7-2a7a6cfdba37',
+    'Content-Type': 'application/json'
+  }
 });

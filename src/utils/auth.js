@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.study.hard.nomoreparties.sbs';
+export const BASE_URL = 'https://auth.nomoreparties.co';
 
 function getResponseData(res) {
   if (!res.ok) {
