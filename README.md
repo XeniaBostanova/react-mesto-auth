@@ -10,4 +10,4 @@
 
 **Ссылка на проект**
 
-https://xeniabostanova.github.io/react-mesto-auth/index.html
+https://xeniabostanova.github.io/react-mesto-auth
